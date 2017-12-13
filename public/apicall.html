@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Test API</title>
+</head>
+
+<body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+var googleKey = "AIzaSyDXm-wes9X-wKaHq0h2vDsVhKgfL6SI_A4";
+
+// These variables will hold the results we get from the user's inputs via HTML
+var title = "Tale of Two Cities";
+var isbn = "9780195152166";
+
+var queryURL = "https://www.googleapis.com/books/v1/volumes?q=" +isbn+ "&key="+googleKey+"";
+
+function runQuery(queryURL) {
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).done(function(googleBooksData) {
+
+    // Logging the URL so we have access to it for troubleshooting
+    console.log("------------------------------------");
+    console.log("URL: " + queryURL);
+    console.log("------------------------------------");
+    // Log the googleBooksData to console, where it will show up as an object
+    console.log(googleBooksData);
+    console.log("------------------------------------");
+
+  });
+};
+
+runQuery(queryURL)
+</script>

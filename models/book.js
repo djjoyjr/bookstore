@@ -1,5 +1,3 @@
-// Dependencies
-// =============================================================
 
 // Sequelize (capital) references the standard library
 var Sequelize = require("sequelize");
@@ -17,8 +15,8 @@ var Book = sequelize.define("book", {
   genre: {
     type: Sequelize.STRING
   },
-  pages: {
-    type: Sequelize.INTEGER
+  isbn: {
+    type: Sequelize.STRING
   }
 }, {
   timestamps: false
