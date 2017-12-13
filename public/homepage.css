@@ -16,8 +16,21 @@ h2{
 	font-size: 600%;
 }
 
+h3{
+	color: black;
+	font-family: font-family: 'Passion One', cursive;
+	font-size: 300%;
+}
+
+h4{
+	color: black
+	font-family: font-family: 'Passion One', cursive;
+	font-size: 200%;
+	
+}
+
 p{
-	color: white;
+	color: black;
 	font-family: 'Open Sans', sans-serif;
 }
 
