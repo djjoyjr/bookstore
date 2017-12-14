@@ -55,34 +55,6 @@ module.exports = function(app) {
     }
   });
 
-  // Get all "long" books (books 300 pages or more)
-  app.get("/api/books/long", function(req, res) {
-    Book.findAll({
-      where: {
-        pages: {
-          $gte: 300
-        }
-      },
-      order: [["pages", "DESC"]]
-    }).then(function(results) {
-      res.json(results);
-    });
-  });
-
-  // Get all "short" books (books 150 pages or less)
-  app.get("/api/books/short", function(req, res) {
-    Book.findAll({
-      where: {
-        pages: {
-          $lte: 150
-        }
-      },
-      order: [["pages", "ASC"]]
-    }).then(function(results) {
-      res.json(results);
-    });
-  });
-
   // Add a book
   app.post("/api/new", function(req, res) {
     console.log("Book Data:");

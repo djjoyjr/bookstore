@@ -26,6 +26,7 @@ app.use(passport.session());
 
 // Static directory
 app.use(express.static("/public"));
+app.use(express.static("/public/js"));
 
 // Routes
 // =============================================================
