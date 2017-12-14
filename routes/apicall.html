@@ -4,18 +4,20 @@
 <head>
   <meta charset="utf-8">
   <title>Test API</title>
+  <script type="text/javascript" src="./apicall.js"></script>
+
 </head>
 
 <body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 </body>
 </html>
+<script type="text/javascript" src="./assets/javascript/gifs.js">
 
-<script type="text/javascript">
-
+// Google API stuff here
 var googleKey = "AIzaSyDXm-wes9X-wKaHq0h2vDsVhKgfL6SI_A4";
 
 // These variables will hold the results we get from the user's inputs via HTML
@@ -24,7 +26,7 @@ var isbn = "9780195152166";
 
 var queryURL = "https://www.googleapis.com/books/v1/volumes?q=" +isbn+ "&key="+googleKey+"";
 
-function runQuery(queryURL) {
+function googleQuery(queryURL) {
 
   $.ajax({
     url: queryURL,
@@ -41,6 +43,5 @@ function runQuery(queryURL) {
 
   });
 };
-
-runQuery(queryURL)
+googleQuery(queryURL);
 </script>
