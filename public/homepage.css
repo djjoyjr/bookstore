@@ -1,12 +1,15 @@
 .jumbotron{
 	height: 700px;
-	background-image: url("https://images.pexels.com/photos/264635/pexels-photo-264635.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb");
+	background-image: url("https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb");
+	background-repeat: no-repeat;
 }
 
 h1{
-	color: white;
+	color: orange;
 	font-family: 'Passion One', cursive;
 	text-shadow: 2px 2px black;
+	font-size: 300%;
+
 
 }
 
@@ -18,15 +21,15 @@ h2{
 
 h3{
 	color: black;
-	font-family: font-family: 'Passion One', cursive;
+	font-family: 'Passion One', cursive;
 	font-size: 300%;
 }
 
 h4{
 	color: black
-	font-family: font-family: 'Passion One', cursive;
+	font-family: 'Passion One', cursive;
 	font-size: 200%;
-	
+
 }
 
 p{
@@ -41,4 +44,7 @@ p{
 .about{
 	height: 700px;
 	width: 100%;
+}
+.btn{
+	background-color: orange;
 }
