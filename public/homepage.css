@@ -1,0 +1,44 @@
+.jumbotron{
+	height: 700px;
+	background-image: url("https://images.pexels.com/photos/264635/pexels-photo-264635.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb");
+}
+
+h1{
+	color: white;
+	font-family: 'Passion One', cursive;
+	text-shadow: 2px 2px black;
+
+}
+
+h2{
+	color: black;
+	font-family: 'Passion One', cursive;
+	font-size: 600%;
+}
+
+h3{
+	color: black;
+	font-family: font-family: 'Passion One', cursive;
+	font-size: 300%;
+}
+
+h4{
+	color: black
+	font-family: font-family: 'Passion One', cursive;
+	font-size: 200%;
+	
+}
+
+p{
+	color: black;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.footer{
+	background-color: #353c3f;
+}
+
+.about{
+	height: 700px;
+	width: 100%;
+}
