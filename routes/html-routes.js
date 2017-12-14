@@ -9,14 +9,41 @@ var path = require("path");
 
 // Routes
 // =============================================================
+
+  //passport starts here--------------------------------
+
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 module.exports = function(app) {
+
+  app.get("/", function(req, res) {
+    if (req.user) {
+      res.redirect("/members");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
+
+  app.get("/login", function(req, res) {
+    if (req.user) {
+      res.redirect("/members");
+    }
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+
+  app.get("/members", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/members.html"));
+  });
+
+
+
+//passport ends here-------------------------------------
 
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
   // index route loads view.html
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/view.html"));
-  });
+  // app.get("/", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/view.html"));
+  // });
 
   // add route loads the add.html page, where users can enter new books to the db
   app.get("/add", function(req, res) {
