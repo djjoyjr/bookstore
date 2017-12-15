@@ -1,58 +1,25 @@
 <!DOCTYPE html>
-<html lang="en-us">
-	<head>
-
-		<meta charset="UTF-8">
-		<title>Book$tore</title>
-
-		<!-- jQuery -->
-		<script src="https://code.jquery.com/jquery.js"></script>
-	</head>
-	<body>
-
-		<nav class="navbar is-transparent">
-	  <div class="navbar-brand">
-	    <a class="navbar-item">
-	      <img src="/public/img/logo.png" alt="Book$tore logo" width="158" height="56">
-	    </a>
-	    <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-	      <span></span>
-	      <span></span>
-	      <span></span>
-	    </div>
-	  </div>
-
-	  <div id="navbarExampleTransparentExample" class="navbar-menu">
-	    <div class="navbar-start">
-	      <div class="navbar-item has-dropdown is-hoverable">
-	        <a class="navbar-link" href="/documentation/overview/start/">
-	          Menu
-	        </a>
-	        <div class="navbar-dropdown is-boxed">
-	          <a class="navbar-item" href="/" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-eye-open"></span> Search Books</a>
-	          <a class="navbar-item" href="/add" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Add New Book</a>
-	          <a class="navbar-item" href="/all" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> All Books</a>
-					</div>
-	      </div>
-	    </div>
-
-	    <div class="navbar-end">
-	      <div class="navbar-item">
-	        <div class="field is-grouped">
-	          <p class="control">
-	            <a class="button" href="/logout">
-	              <span>
-	                Logout
-	              </span>
-	            </a>
-	          </p>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
-	</nav>
-
-
-
-	</body>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="./js/dashboard.css"/>
+<title>Books Search Software</title>
+<body class="#212121 grey darken-4">
+	<div id="search" class="#f5f5f5 grey lighten-4 z-depth-5">
+		<form id="myform">
+			<div class="input-field">
+				<input type="search" id="books">
+				<label for="search">Search Books</label>
+			</div>
+			<button class="btn red">Search Books</button>
+		</form>
+	</div>
+	<div id="result">
+		
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script src="./js/dashboardserver.js"></script>
+</body>
+</head>
 </html>
