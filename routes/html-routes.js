@@ -15,7 +15,7 @@ module.exports = function(app) {
     if (req.user) {
       res.render("index");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.sendFile(path.join(__dirname, "../public/homepage.html"));
   });
 
   app.get("/members", isAuthenticated, function(req, res) {
