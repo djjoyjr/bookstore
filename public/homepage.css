@@ -1,3 +1,10 @@
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px !important;  /* 50% of your logo width */
+    display: block;
+}
+
 .jumbotron{
 	height: 700px;
 	background-image: url("https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb");
@@ -7,7 +14,7 @@ h1{
 	color: orange;
 	font-family: 'Passion One', cursive;
 	text-shadow: 2px 2px black;
-	font-size: 300%;
+	font-size: 600%;
 }
 h2{
 	color: black;
@@ -38,3 +45,23 @@ p{
 .btn{
 	background-color: orange;
 }
+
+#Loginform{
+
+	background: rgba(128,0,0,0.1);
+	height: 355px;
+	width: 1400px;
+	
+
+}
+
+.form-group{
+	width: 500px;
+}
+
+img{
+
+}
+
+
+
