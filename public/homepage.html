@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book$tore</title>
+
+<!-- Bootstrap CSS & JS, jQuery-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<!-- css link -->
+<link rel="stylesheet" type="text/css" href="homepage.css">
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Passion+One" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="login.js"></script>
+
+</head>
+<body>
+
+	<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">Book$tore</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Login</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">BookShelf</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Bookcase</button>
+    </form>
+  </div>
+</nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+  <h1 class="display-3" align="center">BOOK$TORE</h1>
+  <p class="lead" align="center">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+
+  <p class="lead" align="center">
+
+    <a class="btn btn-primary btn-lg" href="/signup.html" role="button" >Sign Up</a>
+  </p>
+	<h2>Login Form</h2>
+	<form class="login">
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input type="email" class="form-control" id="email-input" placeholder="Email">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword1">Password</label>
+			<input type="password" class="form-control" id="password-input" placeholder="Password">
+		</div>
+		<button type="submit" class="btn btn-default">Login</button>
+	</form>
+</div>
+
+<div class="about" align="center">
+	<h2>HOW WE WORK:</h2>
+
+<!--Section: Features v.2-->
+<section class="section feature-box">
+
+    <!--Section heading-->
+    <h4 class="section-heading pt-4">Why is it so great?</h4>
+    <!--Section description-->
+    <p class="section-description lead grey-text">Sell your books back for cash! Compare multiple offers from multiple sites and get the best prices. Buy, Sell, Track, and Trade your favorite titles!</p>
+
+    <!--Grid row-->
+    <div class="row features-small">
+
+        <!--Grid column-->
+        <div class="col-md-4 mb-r">
+            <div class="col-1 col-md-2 float-left">
+                <i class="fa fa-bullhorn blue-text"></i>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+                <h4 class="feature-title">Buy</h4>
+                <p class="grey-text">Book$tore searches hundreds of other book and e-comerce sites at once to compare and find the best price for the books your are looking to purchase.</p>
+                <a class="btn btn-primary btn-sm ml-0">Learn more</a>
+            </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-4 mb-r">
+            <div class="col-1 col-md-2 float-left">
+                <i class="fa fa-cogs pink-text"></i>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+                <h4 class="feature-title">Sell</h4>
+                <p class="grey-text">Make extra cash selling your unwanted books online.</p>
+                <a class="btn btn-pink btn-sm ml-0">Learn more</a>
+            </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-4 mb-r">
+            <div class="col-1 col-md-2 float-left">
+                <i class="fa fa-dashboard purple-text"></i>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+                <h4 class="feature-title">Trade</h4>
+                <p class="grey-text">Swap exchange and trade your old books.</p>
+                <a class="btn btn-secondary btn-sm ml-0">Learn more</a>
+            </div>
+        </div>
+        <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+</section>
+<!--Section: Features v.2-->
+
+
+</div>
+
+<!-- Recommended Stuff for You -->
+<div class="Recommendations" align="center">
+<h2>YOUR RECOMMENDATIONS:</h2>
+</div>
+<!--Section:-->
+<section class="section extra-margins text-center pb-3">
+
+    <!--Section heading-->
+    <h2 class="section-heading h1 pt-4">Popular Titles</h2>
+    <!--Section description-->
+    <p class="section-description"> Looking to read something new? Check out some of our recommendations based on your preferences.</p>
+
+    <!--Grid row-->
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-r">
+            <!--Featured image-->
+            <div class="view overlay hm-white-slight z-depth-1-half mb-2">
+                <img src="http://4.bp.blogspot.com/_B4T5c7QO8yI/S6votP-G8cI/AAAAAAAAAhA/Q41B3LT8geE/s1600/Book+Cover.jpg" class="img-fluid" alt="First sample image" height="600" width="400">
+                <a>
+                    <div class="mask"></div>
+                </a>
+            </div>
+
+            <!--Excerpt-->
+            <a href="" class="pink-text"><h6 class="mb-3 mt-3"><i class="fa fa-map "></i><strong> Classics</strong></h6></a>
+            <h4 class="mb-3">A Tale of Two Cities</h4>
+            <p>by <a><strong>Charles Dickens</strong></a></p>
+            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus voluptas.</p>
+            <a class="btn btn-pink btn-rounded">Select</a>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-r">
+            <!--Featured image-->
+            <div class="view overlay hm-white-slight z-depth-1-half mb-2">
+                <img src="http://ecx.images-amazon.com/images/I/51udawWvXIL.jpg" class="img-fluid" alt="Second sample image" height="600" width="400">
+                <a>
+                    <div class="mask"></div>
+                </a>
+            </div>
+
+            <!--Excerpt-->
+            <a href="" class="deep-orange-text"><h6 class="mb-3 mt-3"><i class="fa fa-graduation-cap"></i><strong> Thrillers</strong></h6></a>
+            <h4 class="mb-3">This is title of the news</h4>
+            <p>by <a><strong>James Patterson</strong></a></p>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
+            <a class="btn btn-deep-orange btn-rounded">Select</a>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-r">
+            <!--Featured image-->
+            <div class="view overlay hm-white-slight z-depth-1-half mb-2">
+                <img src="http://kmsjsilva.weebly.com/uploads/6/9/7/1/69715047/7122482_orig.jpg" alt="Thrid sample image" height="600" width="400">
+                <a>
+                    <div class="mask"></div>
+                </a>
+            </div>
+
+            <!--Excerpt-->
+            <a href="" class="cyan-text"><h6 class="mb-3 mt-3"><i class="fa fa-fire "></i><strong> Culture</strong></h6></a>
+            <h4 class="mb-3">This is title of the news</h4>
+            <p>by <a><strong>R.J. Palacio</strong></a></p>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+            <a class="btn btn-info btn-rounded">Select</a>
+        </div>
+        <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+</section>
+<!--Section: Blog v.2-->
+
+
+
+<!--Footer-->
+<footer class="footer">
+
+    <!--Footer Links-->
+    <div class="container">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-4">
+                <h5 class="title mb-4 mt-3 font-bold">Footer Content</h5>
+                <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit.</p>
+            </div>
+            <!--/.First column-->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!--Second column-->
+            <div class="col-md-2 mx-auto">
+                <h5 class="title mb-4 mt-3 font-bold">Links</h5>
+                <ul>
+                    <li><a href="#!">Link 1</a></li>
+                    <li><a href="#!">Link 2</a></li>
+                    <li><a href="#!">Link 3</a></li>
+                    <li><a href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <!--/.Second column-->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!--Third column-->
+            <div class="col-md-2 mx-auto">
+                <h5 class="title mb-4 mt-3 font-bold">Links</h5>
+                <ul>
+                    <li><a href="#!">Link 1</a></li>
+                    <li><a href="#!">Link 2</a></li>
+                    <li><a href="#!">Link 3</a></li>
+                    <li><a href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <!--/.Third column-->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!--Fourth column-->
+            <div class="col-md-2 mx-auto">
+                <h5 class="title mb-4 mt-3 font-bold ">Links</h5>
+                <ul>
+                    <li><a href="#!">Link 1</a></li>
+                    <li><a href="#!">Link 2</a></li>
+                    <li><a href="#!">Link 3</a></li>
+                    <li><a href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <!--/.Fourth column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <hr>
+
+    <!--Call to action-->
+    <div class="call-to-action">
+        <ul>
+            <li>
+                <h5 class="mb-1">Register for free</h5>
+            </li>
+            <li><a href="" class="btn btn-danger btn-rounded">Sign up!</a></li>
+        </ul>
+    </div>
+    <!--/.Call to action-->
+
+    <hr>
+
+    <!--Social buttons-->
+    <div class="social-section text-center">
+        <ul>
+
+            <li><a class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook"> </i></a></li>
+            <li><a class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"> </i></a></li>
+            <li><a class="btn-floating btn-sm btn-gplus"><i class="fa fa-google-plus"> </i></a></li>
+            <li><a class="btn-floating btn-sm btn-li"><i class="fa fa-linkedin"> </i></a></li>
+            <li><a class="btn-floating btn-sm btn-dribbble"><i class="fa fa-dribbble"> </i></a></li>
+
+        </ul>
+    </div>
+    <!--/.Social buttons-->
+
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2017 Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+
+        </div>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+
+</body>
+</html>

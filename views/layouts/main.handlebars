@@ -4,8 +4,64 @@
 	<meta charset="UTF-8">
 	<title>Book$tore</title>
 	<script src="https://code.jquery.com/jquery.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
+
 </head>
 <body>
+	<nav class="navbar is-transparent">
+	<div class="navbar-brand">
+		<a class="navbar-item" href="https://bulma.io">
+			<img src="/logo.png" alt="Book$tore logo" width="158" height="56">
+		</a>
+		<div class="navbar-burger" data-target="navbarExampleTransparentExample">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+	<div id="navbarExampleTransparentExample" class="navbar-menu">
+		<div class="navbar-start">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link" href="/documentation/overview/start/">
+					Menu
+				</a>
+				<div class="navbar-dropdown is-boxed">
+					<a class="navbar-item" href="/" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-eye-open"></span> Search Books</a>
+					<a class="navbar-item" href="/add" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Add New Book</a>
+					<a class="navbar-item" href="/all" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> All Books</a>
+<!-- 	          <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+					Layout
+				</a>
+				<a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+					Form
+				</a>
+				<hr class="navbar-divider">
+				<a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+					Elements
+				</a>
+				<a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+					Components
+				</a>
+				 -->	        </div>
+			</div>
+		</div>
+
+		<div class="navbar-end">
+			<div class="navbar-item">
+				<div class="field is-grouped">
+					<p class="control">
+						<a class="button" href="/logout">
+							<span>
+								Logout
+							</span>
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
 	{{{ body }}}
 </body>
 </html>

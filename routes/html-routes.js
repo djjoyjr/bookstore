@@ -6,20 +6,20 @@ module.exports = function(app) {
 
   app.get("/", function(req, res) {
     if (req.user) {
-      res.redirect("/members");
+      res.render("index");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.sendFile(path.join(__dirname, "../public/homepage.html"));
   });
 
   app.get("/login", function(req, res) {
     if (req.user) {
-      res.redirect("/members");
+      res.render("index");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.sendFile(path.join(__dirname, "../public/homepage.html"));
   });
 
   app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("index");
   });
 
 };
