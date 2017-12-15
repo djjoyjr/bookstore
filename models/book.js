@@ -1,4 +1,3 @@
-
 // Sequelize (capital) references the standard library
 var Sequelize = require("sequelize");
 // sequelize (lowercase) references my connection to the DB.
@@ -6,7 +5,7 @@ var sequelize = require("../config/connection.js");
 
 // Creates a "Book" model that matches up with DB
 module.exports = function(sequelize, DataTypes) {
-var Book = sequelize.define("book", {
+var Book = sequelize.define("Book", {
   title: {
     type: Sequelize.STRING
   },
@@ -22,11 +21,12 @@ var Book = sequelize.define("book", {
 }, {
   timestamps: false
 });
-return Book
-}
-
-// Syncs with DB
-// Book.sync();
-//
-// // Makes the Book Model available for other files (will also create a table)
-// module.exports = Book;
+Book.associate = function(models) {
+  Book.belongsTo(models.User, {
+    foreignKey: {
+      allowNull: false
+    }
+  });
+};
+return Book;
+};

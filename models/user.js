@@ -1,4 +1,10 @@
+// Sequelize (capital) references the standard library
+var Sequelize = require("sequelize");
+// sequelize (lowercase) references my connection to the DB.
+var sequelize = require("../config/connection.js");
+
 var bcrypt = require("bcrypt-nodejs");
+
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     email: {
@@ -14,6 +20,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+  User.associate = function(models) {
+    User.hasMany(models.Book, {
+      onDelete: "cascade"
+    });
+  };
   User.prototype.validPassword = function(password) {
     return bcrypt.compareSync(password, this.password);
   };

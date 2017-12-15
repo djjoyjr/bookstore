@@ -3,44 +3,34 @@
 	background-image: url("https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb");
 	background-repeat: no-repeat;
 }
-
 h1{
 	color: orange;
 	font-family: 'Passion One', cursive;
 	text-shadow: 2px 2px black;
 	font-size: 300%;
-
-
 }
-
 h2{
 	color: black;
 	font-family: 'Passion One', cursive;
 	font-size: 600%;
 }
-
 h3{
 	color: black;
 	font-family: 'Passion One', cursive;
 	font-size: 300%;
 }
-
 h4{
 	color: black
 	font-family: 'Passion One', cursive;
 	font-size: 200%;
-
 }
-
 p{
 	color: black;
 	font-family: 'Open Sans', sans-serif;
 }
-
 .footer{
 	background-color: #353c3f;
 }
-
 .about{
 	height: 700px;
 	width: 100%;
