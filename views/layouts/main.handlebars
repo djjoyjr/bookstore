@@ -5,12 +5,14 @@
 	<title>Book$tore</title>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
+	<link rel="stylesheet" type="text/css" href="/css/dashboard.css">
+
 
 </head>
 <body>
 	<nav class="navbar is-transparent">
 	<div class="navbar-brand">
-		<a class="navbar-item" href="https://bulma.io">
+		<a class="navbar-item">
 			<img src="/logo.png" alt="Book$tore logo" width="158" height="56">
 		</a>
 		<div class="navbar-burger" data-target="navbarExampleTransparentExample">
@@ -19,33 +21,29 @@
 			<span></span>
 		</div>
 	</div>
-
 	<div id="navbarExampleTransparentExample" class="navbar-menu">
 		<div class="navbar-start">
-			<div class="navbar-item has-dropdown is-hoverable">
-				<a class="navbar-link" href="/documentation/overview/start/">
-					Menu
-				</a>
-				<div class="navbar-dropdown is-boxed">
-					<a class="navbar-item" href="/" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-eye-open"></span> Search Books</a>
-					<a class="navbar-item" href="/add" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Add New Book</a>
-					<a class="navbar-item" href="/all" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> All Books</a>
-<!-- 	          <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
-					Layout
-				</a>
-				<a class="navbar-item" href="https://bulma.io/documentation/form/general/">
-					Form
-				</a>
-				<hr class="navbar-divider">
-				<a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
-					Elements
-				</a>
-				<a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
-					Components
-				</a>
-				 -->	        </div>
-			</div>
+				<span><button class="button is-light is-medium" id="addNewBookButton">Add New Book</button></span>
+				<span><button class="button is-light is-medium" id="booksToSell"></span>Show Books To Sell</a></span>
 		</div>
+
+		<!-- The New Book Modal -->
+		<div id="newBookModal" class="modal">
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+				<form  class="button-size" action="/" method='POST'>
+					<p>Enter either the book title or the ISBN to search for your book.</p>
+					<textarea type="text" name="title" placeholder="Title" id="newtitle"></textarea>
+					<textarea type="text" name="isbn" placeholder="ISBN" id="newisbn"></textarea>
+					<button type="submit" id="create-book">Save Book</button>
+				</form>
+		  </div>
+		</div>
+
+		  </div>
+		</div>
+
 
 		<div class="navbar-end">
 			<div class="navbar-item">
@@ -65,3 +63,68 @@
 	{{{ body }}}
 </body>
 </html>
+
+<script>
+
+var modal = document.getElementById('newBookModal');
+// Get the button that opens the modal
+var btn = document.getElementById("addNewBookButton");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Google API stuff here
+var googleKey = "AIzaSyDXm-wes9X-wKaHq0h2vDsVhKgfL6SI_A4";
+var title = null;
+var isbn = null;
+var queryURL = "";
+
+// These variables will hold the results we get from the user's inputs via HTML
+// $("#create-book").on("click", function(event) {
+//   event.preventDefault();
+//   title = $("#newtitle").val().trim();
+// 	isbn = $("#newisbn").val().trim();
+// 	console.log(title);
+// 	console.log(isbn);
+// 	var titleQueryURL = "https://www.googleapis.com/books/v1/volumes?q=" +title+ "&key="+googleKey+"";
+// 	var isbnQueryURL = "https://www.googleapis.com/books/v1/volumes?q=" +isbn+ "&key="+googleKey+"";
+// 	if (title == !null) {
+// 		queryURL = titleQueryURL;
+// 	}
+// 	if (isbn == !null) {
+// 		queryURL = isbnQueryURL;
+// 	}
+// 	googleQuery(queryURL);
+// });
+//
+// function googleQuery(queryURL) {
+//   $.ajax({
+//     url: queryURL,
+//     method: "GET"
+//   }).done(function(googleBooksData) {
+//
+//     // Logging the URL so we have access to it for troubleshooting
+//     console.log("------------------------------------");
+//     console.log("URL: " + queryURL);
+//     console.log("------------------------------------");
+//     // Log the googleBooksData to console, where it will show up as an object
+//     console.log(googleBooksData);
+//     console.log("------------------------------------");
+// 		// location.replace(googleBooksData);
+//   });
+//};
+
+</script>

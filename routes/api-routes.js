@@ -39,4 +39,10 @@ module.exports = function(app) {
       });
     }
   });
+  app.post("/api/books", function(req, res) {
+    db.Book.create(req.body).then(function(dbBook) {
+      res.json(dbBook);
+    });
+  });
+
 };

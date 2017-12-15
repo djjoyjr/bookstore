@@ -10,76 +10,34 @@
   {{/each}}
 </ul>
 
-<h2>Add a Book</h2>
+<!-- <h2>Add a Book</h2>
 <form id="addbook" class="button-size">
-	<textarea type="text" name="book"></textarea>
-	<button type="submit">Save Book</button>
+  <textarea type="text" name="book"></textarea>
+  <button type="submit">Save Book</button>
 </form>
 
-<h2>Update a Book</h2>
-<form id="updatebook" class="button-size">
-  <input type="text" name="id" placeholder="id">
-	<textarea type="text" name="book"></textarea>
-	<button type="submit">Update Book</button>
-</form>
-
+ -->
 <script type="text/javascript">
-  $(".delbook").on("click", function(event) {
-    var id = $(this).data("bookid");
 
-    // Send the DELETE request.
-    $.ajax("/books/" + id, {
-      type: "DELETE"
-    }).then(
-      function() {
-        console.log("deleted id ", id);
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
+  // $("#addbook").on("submit", function(event) {
+  //   // Make sure to preventDefault on a submit event.
+  //   event.preventDefault();
+  //
+  //   var newbook = {
+  //     book: $("#addbook [name=book]").val().trim()
+  //   };
+  //
+  //   // Send the POST request.
+  //   $.ajax("/api/books", {
+  //     type: "POST",
+  //     data: newbook
+  //   }).then(
+  //     function() {
+  //       console.log("added new book");
+  //       // Reload the page to get the updated list
+  //       location.reload();
+  //     }
+  //   );
+  // });
 
-  $("#addbook").on("submit", function(event) {
-    // Make sure to preventDefault on a submit event.
-    event.preventDefault();
-
-    var newbook = {
-      book: $("#addbook [name=book]").val().trim()
-    };
-
-    // Send the POST request.
-    $.ajax("/books", {
-      type: "POST",
-      data: newbook
-    }).then(
-      function() {
-        console.log("added new book");
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
-
-  $("#updatebook").on("submit", function(event) {
-    // Make sure to preventDefault on a submit event.
-    event.preventDefault();
-
-    var id = $("[name=id]").val().trim();
-
-    var updatedBook = {
-      movie: $("#updatebook [name=book]").val().trim()
-    };
-
-    // Send the PUT request.
-    $.ajax("/books/" + id, {
-      type: "PUT",
-      data: updatedBook
-    }).then(
-      function() {
-        console.log("updated id ", id);
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
 </script>
