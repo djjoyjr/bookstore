@@ -2,42 +2,17 @@
   {{#each books}}
     <li>
       <p>
-        {{this.id}}. {{this.book}}
-
-        <button data-bookid="{{this.id}}" class="delbook">Delete</button>
+        {{this.title}}
+        <br>
+        {{this.author}}
+        <br>
+        {{this.isbn}}
       </p>
     </li>
   {{/each}}
 </ul>
 
-<!-- <h2>Add a Book</h2>
-<form id="addbook" class="button-size">
-  <textarea type="text" name="book"></textarea>
-  <button type="submit">Save Book</button>
-</form>
-
- -->
 <script type="text/javascript">
 
-  // $("#addbook").on("submit", function(event) {
-  //   // Make sure to preventDefault on a submit event.
-  //   event.preventDefault();
-  //
-  //   var newbook = {
-  //     book: $("#addbook [name=book]").val().trim()
-  //   };
-  //
-  //   // Send the POST request.
-  //   $.ajax("/api/books", {
-  //     type: "POST",
-  //     data: newbook
-  //   }).then(
-  //     function() {
-  //       console.log("added new book");
-  //       // Reload the page to get the updated list
-  //       location.reload();
-  //     }
-  //   );
-  // });
 
 </script>

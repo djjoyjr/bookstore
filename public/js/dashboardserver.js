@@ -31,14 +31,21 @@ $(document).ready(function(){
              isbn.appendTo('#result')
              author.appendTo('#result');
              img.appendTo('#result');
+             console.log(response.items[i].volumeInfo);
             }
      	  });
       }
       return false;
    });
 });
+
+
 $(document).on("click", "img", logToDB);
 function logToDB () {
+  var userId="";
+  $.get("/api/user_data").then(function(data) {
+    userId = data.id;
+  });
   console.log($(this).attr("data-title"));
   console.log($(this).attr("data-author"));
   console.log($(this).attr("data-isbn"));
@@ -48,7 +55,8 @@ function logToDB () {
     title: $(this).attr("data-title"),
     author: $(this).attr("data-author"),
     isbn: $(this).attr("data-isbn"),
-    description: $(this).attr("data-description")
+    description: $(this).attr("data-description"),
+    UserId: userId
   };
   $.post("/api/books", newBook);
 }
