@@ -40,8 +40,13 @@ module.exports = function(app) {
     }
   });
   app.post("/api/books", function(req, res) {
-    db.Book.create(req.body).then(function(dbBook) {
-      res.json(dbBook);
+    db.Book.create({
+      title: req.body.title,
+      author: req.body.author,
+      isbn: req.body.isbn,
+      description: req.body.description
+    }).then(function(dbBook) {
+      res.redirect("/members");
     });
   });
 

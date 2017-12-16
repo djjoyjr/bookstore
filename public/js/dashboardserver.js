@@ -26,6 +26,7 @@ $(document).ready(function(){
              img.attr('data-title', response.items[i].volumeInfo.title);
              img.attr('data-author', response.items[i].volumeInfo.authors);
              img.attr('data-isbn', response.items[i].volumeInfo.industryIdentifiers[0].identifier);
+             img.attr('data-description', response.items[i].volumeInfo.description);
              title.appendTo('#result');
              isbn.appendTo('#result')
              author.appendTo('#result');
@@ -41,5 +42,13 @@ function logToDB () {
   console.log($(this).attr("data-title"));
   console.log($(this).attr("data-author"));
   console.log($(this).attr("data-isbn"));
+  console.log($(this).attr("data-description"));
 
+  var newBook = {
+    title: $(this).attr("data-title"),
+    author: $(this).attr("data-author"),
+    isbn: $(this).attr("data-isbn"),
+    description: $(this).attr("data-description")
+  };
+  $.post("/api/books", newBook);
 }

@@ -12,9 +12,6 @@ var Book = sequelize.define("Book", {
   author: {
     type: Sequelize.STRING
   },
-  genre: {
-    type: Sequelize.STRING
-  },
   isbn: {
     type: Sequelize.STRING
   },
