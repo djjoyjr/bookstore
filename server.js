@@ -31,6 +31,7 @@ app.use(passport.session());
 app.use(express.static(process.cwd() + '/public'));
 app.use(express.static(process.cwd() + '/public/img'));
 app.use(express.static(process.cwd() + '/public/js'));
+app.use(express.static(process.cwd() + '/public/css'));
 
 //Handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));

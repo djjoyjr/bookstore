@@ -6,7 +6,7 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
 	<link rel="stylesheet" type="text/css" href="/css/dashboard.css">
-
+	<script src="/js/dashboardserver.js"></script>
 
 </head>
 <body>
@@ -28,21 +28,29 @@
 		</div>
 
 		<!-- The New Book Modal -->
-		<div id="newBookModal" class="modal">
+		<div id="search" class="modal #f5f5f5 grey lighten-4 z-depth-5">
+			<title>Books Search Software</title>
+			<body class="#212121 grey darken-4">
+					<form id="myform">
+						<div class="input-field">
+							<input type="search" id="books">
+							<label for="search">Enter either the book title or ISBN that you're searching for.</label>
+						</div>
+						<button class="btn red">Search Books</button>
+					</form>
+
 		  <!-- Modal content -->
-		  <div class="modal-content">
-		    <span class="close">&times;</span>
+<!-- 		  <div class="modal-content">
+  <span class="close">&times;</span>
 				<form  class="button-size" action="/" method='POST'>
 					<p>Enter either the book title or the ISBN to search for your book.</p>
 					<textarea type="text" name="title" placeholder="Title" id="newtitle"></textarea>
 					<textarea type="text" name="isbn" placeholder="ISBN" id="newisbn"></textarea>
 					<button type="submit" id="create-book">Save Book</button>
 				</form>
-		  </div>
+</div> -->
 		</div>
-
-		  </div>
-		</div>
+	</div>
 
 
 		<div class="navbar-end">
@@ -60,13 +68,17 @@
 		</div>
 	</div>
 </nav>
+<div id="result"></div>
+
+
+
 	{{{ body }}}
 </body>
 </html>
 
 <script>
 
-var modal = document.getElementById('newBookModal');
+var modal = document.getElementById('search');
 // Get the button that opens the modal
 var btn = document.getElementById("addNewBookButton");
 // Get the <span> element that closes the modal
@@ -87,10 +99,10 @@ window.onclick = function(event) {
 }
 
 // Google API stuff here
-var googleKey = "AIzaSyDXm-wes9X-wKaHq0h2vDsVhKgfL6SI_A4";
-var title = null;
-var isbn = null;
-var queryURL = "";
+// var googleKey = "AIzaSyDXm-wes9X-wKaHq0h2vDsVhKgfL6SI_A4";
+// var title = null;
+// var isbn = null;
+// var queryURL = "";
 
 // These variables will hold the results we get from the user's inputs via HTML
 // $("#create-book").on("click", function(event) {
