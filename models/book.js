@@ -17,6 +17,9 @@ var Book = sequelize.define("Book", {
   },
   isbn: {
     type: Sequelize.STRING
+  },
+  description: {
+    type: Sequelize.TEXT
   }
 }, {
   timestamps: false

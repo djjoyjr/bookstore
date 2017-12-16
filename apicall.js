@@ -17,9 +17,9 @@ function amazonQuery() {
     'Title': 'Stoic Warriors',
     'ResponseGroup': 'ItemAttributes, Offers, Images'
   }).then((response) => {
-    // console.log("Results object: ", response.result);
+    console.log("Results object: ", response.result);
     console.log("***************************************************\n");
-    // console.log("Amazon Page: ", response.result.ItemSearchResponse.Items.Item[0].DetailPageURL);
+    console.log("Amazon Page: ", response.result.ItemSearchResponse.Items.Item[0].DetailPageURL);
     console.log("***************************************************\n");
     // console.log("Item Attributes: ", response.result.ItemSearchResponse.Items.Item[0].ItemAttributes);
     // console.log("Lowest Used Price: ", response.result.ItemSearchResponse.Items.Item[0].OfferSummary.LowestUsedPrice.FormattedPrice);
