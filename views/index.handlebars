@@ -3,14 +3,24 @@
 {{#each books}}
   {{#if keep}}
     <div class="card">
+      <div class="card-image">
+        <figure class="image is-1by1">
+          <img src="{{thumbnail}}" alt="Placeholder image">
+        </figure>
+      </div>
       <div class="card-content">
-      {{title}}
-      <br>
-      {{author}}
-      <br>
-      {{isbn}}
-      <br>
-      {{> books/book-block keep=false}}
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">{{title}}</p>
+            <p class="subtitle is-6">{{isbn}}</p>
+          </div>
+        </div>
+        <div class="content">
+          {{description}}
+          <p> By:  {{author}}</p>
+        </div>
+        {{> books/book-block keep=false}}
+
       </div>
     </div>
   {{/if}}

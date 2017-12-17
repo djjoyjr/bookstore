@@ -5,12 +5,7 @@ body {
 div.bookdiv{
   color: black;
 };
-div.card-content {
-  height: 150px;
-  width: 340px;
-  background-image: url("bookdiv.png");
-};
-.card {
+div.card {
   height: 150px;
   max-width: 340px;
 }

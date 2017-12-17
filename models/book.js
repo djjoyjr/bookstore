@@ -18,6 +18,9 @@ var Book = sequelize.define("Book", {
   description: {
     type: Sequelize.TEXT
   },
+  thumbnail: {
+    type: Sequelize.STRING
+  },
   keep: {
     type: Sequelize.BOOLEAN,
     defaultValue: true

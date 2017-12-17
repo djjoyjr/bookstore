@@ -44,7 +44,8 @@ module.exports = function(app) {
       author: req.body.author,
       isbn: req.body.isbn,
       description: req.body.description,
-      UserId: req.user.id
+      UserId: req.user.id,
+      thumbnail: req.body.thumbnail
     }).then(function(dbBook) {
       res.redirect("/members");
     });

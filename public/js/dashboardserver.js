@@ -27,6 +27,7 @@ $(document).ready(function(){
              img.attr('data-author', response.items[i].volumeInfo.authors);
              img.attr('data-isbn', response.items[i].volumeInfo.industryIdentifiers[0].identifier);
              img.attr('data-description', response.items[i].volumeInfo.description);
+             img.attr('data-thumbnail', response.items[i].volumeInfo.imageLinks.thumbnail);
              title.appendTo('#result');
              isbn.appendTo('#result')
              author.appendTo('#result');
@@ -48,12 +49,14 @@ $(document).ready(function(){
      console.log($(this).attr("data-author"));
      console.log($(this).attr("data-isbn"));
      console.log($(this).attr("data-description"));
+     console.log($(this).attr("data-thumbnail"));
 
      var newBook = {
        title: $(this).attr("data-title"),
        author: $(this).attr("data-author"),
        isbn: $(this).attr("data-isbn"),
        description: $(this).attr("data-description"),
+       thumbnail: $(this).attr("data-thumbnail"),
        UserId: userId
      };
      $.post("/api/books", newBook);
