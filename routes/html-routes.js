@@ -1,7 +1,8 @@
 var path = require("path");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 var db = require("../models");
-var currentUserId = "";
+var currentUserId = require("./api-routes.js");
+console.log(currentUserId);
 
 module.exports = function(app) {
 
@@ -9,6 +10,7 @@ module.exports = function(app) {
     if (req.user) {
       res.render("index");
     }
+
     res.sendFile(path.join(__dirname, "../public/homepage.html"));
   });
 
@@ -20,16 +22,15 @@ module.exports = function(app) {
   });
 
   app.get("/members", isAuthenticated, function(req, res) {
-      app.get("/api/user_data"),(function(data) {
-        currentUserId = data.id;
-      });
+
     db.Book.findAll({
     }, {
       where: {
         UserId: currentUserId
       }
     }).then(function(dbBook) {
-    console.log(dbBook);
+
+    // console.log(dbBook);
     res.render("index", {books: dbBook});
     });
   });

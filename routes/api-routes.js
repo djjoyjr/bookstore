@@ -3,7 +3,6 @@
 var Book = require("../models/book.js");
 var db = require("../models");
 var passport = require("../config/passport");
-var currentUserId = "";
 
 //Passport routes
 module.exports = function(app) {

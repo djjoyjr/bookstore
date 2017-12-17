@@ -2,6 +2,7 @@ $(document).ready(function() {
   var loginForm = $("form.login");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
+  var currentUser = "";
 
   loginForm.on("submit", function(event) {
     event.preventDefault();
@@ -9,6 +10,7 @@ $(document).ready(function() {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
+    currentUser = userData.email;
 
     if (!userData.email || !userData.password) {
       return;
