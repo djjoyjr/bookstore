@@ -49,4 +49,18 @@ module.exports = function(app) {
       res.redirect("/members");
     });
   });
+
+  app.put("/api/books/", function(req, res) {
+    console.log("Updating keep to: " +req.body.keep);
+    console.log("For book wih id: " +req.body.id);
+    db.Book.update({
+      keep: req.body.keep
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbBook) {
+        res.json(dbBook);
+    });
+  });
 };

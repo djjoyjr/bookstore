@@ -1,18 +1,35 @@
+<h2>Books that you definitely want to keep:  </h2>
+<hr>
+{{#each books}}
+  {{#if keep}}
+    <div class="card">
+      <div class="card-content">
+      {{title}}
+      <br>
+      {{author}}
+      <br>
+      {{isbn}}
+      <br>
+      {{> books/book-block keep=false}}
+      </div>
+    </div>
+  {{/if}}
+{{/each}}
+
+
+<h2>Books that you're willing to get rid of:  </h2>
+<hr>
+
 <ul>
   {{#each books}}
-    <li>
-      <p>
-        {{this.title}}
-        <br>
-        {{this.author}}
-        <br>
-        {{this.isbn}}
-      </p>
-    </li>
+    {{#unless keep}}
+      {{title}}
+      <br>
+      {{author}}
+      <br>
+      {{isbn}}
+      {{> books/book-block keep=true}}
+
+    {{/unless}}
   {{/each}}
 </ul>
-
-<script type="text/javascript">
-
-
-</script>

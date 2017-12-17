@@ -5,7 +5,7 @@
 	<title>Book$tore</title>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
-	<link rel="stylesheet" type="text/css" href="/../css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="/main.css">
 	<script src="/../js/dashboardserver.js"></script>
 
 </head>
@@ -24,21 +24,28 @@
 	<div id="navbarExampleTransparentExample" class="navbar-menu">
 		<div class="navbar-start">
 				<span><button class="button is-light is-medium" id="addNewBookButton">Add New Book</button></span>
-				<span><button class="button is-light is-medium" id="booksToSell"></span>Show Books To Sell</a></span>
-		</div>
+<!-- 				<span><button class="button is-light is-medium" id="booksToSell"></span>Show Books To Sell</a></span>
+		 -->		</div>
 
 		<!-- The New Book Modal -->
-		<div id="search" class="modal #f5f5f5 grey lighten-4 z-depth-5">
-			<title>Books Search Software</title>
-			<body class="#212121 grey darken-4">
+		<div id="search" class="modal">
+			<div class="modal-background">
+				<div class="modal-card">
+					<title>Book Search</title>
+					<div class="modal-content">
 					<form id="myform">
-						<div class="input-field">
-							<input type="search" id="books">
+						<div class="input-field is-large">
+							<input type="text" placeholder="Title or ISBN" id="books">
 							<label for="search">Enter either the book title or ISBN that you're searching for.</label>
 						</div>
-						<button class="btn red">Search Books</button>
-					</form>
+						<button class="button is-medium">Search Books</button>
+						<button class="button is-medium" aria-label="Cancel">Cancel</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
+
 	</div>
 		<div class="navbar-end">
 			<div class="navbar-item">
@@ -64,11 +71,9 @@
 <script>
 
 var modal = document.getElementById('search');
-// Get the button that opens the modal
 var btn = document.getElementById("addNewBookButton");
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-// When the user clicks on the button, open the modal
+var cancel = document.getElementById('cancelButton');
 btn.onclick = function() {
     modal.style.display = "block";
 }

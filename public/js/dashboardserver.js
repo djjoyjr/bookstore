@@ -37,26 +37,50 @@ $(document).ready(function(){
       }
       return false;
    });
+
+   $(document).on("click", "img", logToDB);
+   function logToDB () {
+     var userId="";
+     $.get("/api/user_data").then(function(data) {
+       userId = data.id;
+     });
+     console.log($(this).attr("data-title"));
+     console.log($(this).attr("data-author"));
+     console.log($(this).attr("data-isbn"));
+     console.log($(this).attr("data-description"));
+
+     var newBook = {
+       title: $(this).attr("data-title"),
+       author: $(this).attr("data-author"),
+       isbn: $(this).attr("data-isbn"),
+       description: $(this).attr("data-description"),
+       UserId: userId
+     };
+     $.post("/api/books", newBook);
+     location.reload();
+     alert($(this).attr("data-title") + " successfully added to your library.");
+   }
+
+   $(".change-keep").on("click", function(event) {
+     var id = $(this).data("id");
+     var newKeep = $(this).data("newkeep");
+     alert(newKeep);
+     alert(id);
+     var newKeepState = {
+       id: id,
+       keep: newKeep
+     };
+     // Send the PUT request.
+     $.ajax("/api/books/", {
+       type: "PUT",
+       data: newKeepState
+     }).then(
+       function() {
+         console.log("changed keep to", newKeep);
+         // Reload the page to get the updated list
+         location.reload();
+       }
+     );
+   });
+
 });
-
-
-$(document).on("click", "img", logToDB);
-function logToDB () {
-  var userId="";
-  $.get("/api/user_data").then(function(data) {
-    userId = data.id;
-  });
-  console.log($(this).attr("data-title"));
-  console.log($(this).attr("data-author"));
-  console.log($(this).attr("data-isbn"));
-  console.log($(this).attr("data-description"));
-
-  var newBook = {
-    title: $(this).attr("data-title"),
-    author: $(this).attr("data-author"),
-    isbn: $(this).attr("data-isbn"),
-    description: $(this).attr("data-description"),
-    UserId: userId
-  };
-  $.post("/api/books", newBook);
-}

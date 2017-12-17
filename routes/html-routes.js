@@ -28,7 +28,7 @@ module.exports = function(app) {
         UserId: req.user.id
       }
     }).then(function(dbBook) {
-    console.log(dbBook);
+    // console.log(dbBook);
     res.render("index", {books: dbBook});
     });
   });
