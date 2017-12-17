@@ -3,6 +3,8 @@
 var Book = require("../models/book.js");
 var db = require("../models");
 var passport = require("../config/passport");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 
 module.exports = function(app) {
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
@@ -26,6 +28,39 @@ module.exports = function(app) {
     req.logout();
     res.redirect("/");
   });
+
+  app.get("/api/all", isAuthenticated, function (req, res) {
+    db.Book.findAll({
+      where: {
+        UserId: req.user.id
+      }
+    }).then(function (dbBook) {
+      res.render("index", {books: dbBook});
+    });
+  });
+
+  app.get("/api/sell", isAuthenticated, function (req, res) {
+    db.Book.findAll({
+      where: {
+        UserId: req.user.id,
+        keep: 0
+      }
+    }).then(function (dbBook) {
+      res.render("index", {books: dbBook});
+    });
+  });
+
+  app.get("/api/keep", isAuthenticated, function (req, res) {
+    db.Book.findAll({
+      where: {
+        UserId: req.user.id,
+        keep: 1
+      }
+    }).then(function (dbBook) {
+      res.render("index", {books: dbBook});
+    });
+  });
+
 
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
