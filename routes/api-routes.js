@@ -3,6 +3,7 @@
 var Book = require("../models/book.js");
 var db = require("../models");
 var passport = require("../config/passport");
+var currentUserId = "";
 
 //Passport routes
 module.exports = function(app) {
@@ -44,17 +45,10 @@ module.exports = function(app) {
       title: req.body.title,
       author: req.body.author,
       isbn: req.body.isbn,
-      description: req.body.description
+      description: req.body.description,
+      UserId: req.user.id
     }).then(function(dbBook) {
       res.redirect("/members");
-    });
-  });
-
-  app.get("/api/books", function(req, res) {
-    // findAll returns all entries for a table when used with no options
-    db.Book.findAll({}).then(function(dbBook) {
-      // We have access to the todos as an argument inside of the callback function
-      res.json(dbBook);
     });
   });
 };

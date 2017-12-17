@@ -1,15 +1,8 @@
 {
-  "name": "book$tore",
+  "name": "bookstore",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "ajax": "0.0.4",
     "apac": "^3.0.2",
@@ -24,5 +17,20 @@
     "path": "^0.12.7",
     "request": "^2.83.0",
     "sequelize": "^4.3.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djjoyjr/bookstore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djjoyjr/bookstore/issues"
+  },
+  "homepage": "https://github.com/djjoyjr/bookstore#readme"
 }

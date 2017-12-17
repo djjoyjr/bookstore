@@ -1,6 +1,7 @@
 var path = require("path");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 var db = require("../models");
+var currentUserId = "";
 
 module.exports = function(app) {
 
@@ -19,7 +20,15 @@ module.exports = function(app) {
   });
 
   app.get("/members", isAuthenticated, function(req, res) {
-    db.Book.findAll({}).then(function(dbBook) {
+      app.get("/api/user_data"),(function(data) {
+        currentUserId = data.id;
+      });
+    db.Book.findAll({
+    }, {
+      where: {
+        UserId: currentUserId
+      }
+    }).then(function(dbBook) {
     console.log(dbBook);
     res.render("index", {books: dbBook});
     });
