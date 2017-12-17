@@ -17,6 +17,10 @@ var Book = sequelize.define("Book", {
   },
   description: {
     type: Sequelize.TEXT
+  },
+  keep: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: true
   }
 }, {
   timestamps: false
