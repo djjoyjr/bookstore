@@ -111,8 +111,47 @@ module.exports = function(app) {
       });
   });
 
+
+
+
   app.post("/api/amazon/", function(req,res){
-    res.json([req.body.isbn, req.body.title])
+    console.log(req.body.isbn);
+    console.log(req.body.title);
+
+    var title = req.body.title;
+    var isbn = req.body.isbn;
+
+      function amazonQuery() {
+        var details = require('../details');
+        const {OperationHelper} = require('apac');
+        const opHelper = new OperationHelper({
+            awsId: details.AccessId,
+            awsSecret: details.Secret,
+            assocId: details.Tag,
+            locale: 'US'
+        });
+
+        opHelper.execute('ItemSearch', {
+          'SearchIndex': 'Books',
+          'IdType': 'ISBN',
+          'ItemId' : isbn,
+          'Title': title,
+          'ResponseGroup': 'ItemAttributes, Offers, Images'
+        }).then((response) => {
+          // console.log("Results object: ", response.result);
+          // console.log("***************************************************\n");
+          // console.log("Amazon Page: ", response.result.ItemSearchResponse.Items.Item[0].DetailPageURL);
+          // console.log("***************************************************\n");
+          // console.log("Item Attributes: ", response.result.ItemSearchResponse.Items.Item[0].ItemAttributes);
+          // console.log("Lowest Used Price: ", response.result.ItemSearchResponse.Items.Item[0].OfferSummary.LowestUsedPrice.FormattedPrice);
+          // console.log("***************************************************\n");
+          // console.log("For Sale Info from Amazon: ", response.result.ItemSearchResponse.Items.Item[0].OfferSummary);
+          res.json(response.result.ItemSearchResponse.Items.Item[0].OfferSummary);
+        }).catch((err) => {
+            console.error("Something went wrong! ", err);
+        });
+      };
+      amazonQuery();
   });
 
 };
