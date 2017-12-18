@@ -4,6 +4,8 @@
 
 // Dependencies
 var Sequelize = require("sequelize");
+var mysql = require("mysql");
+
 
 // Creates mySQL connection using Sequelize
 var sequelize = new Sequelize("bookstore_db", "root", null, {
