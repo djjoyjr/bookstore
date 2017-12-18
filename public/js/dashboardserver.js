@@ -8,6 +8,14 @@ $(document).ready(function(){
    $("#myform").submit(function(){
      modal.style.display = "none";
    	  var search = $("#books").val();
+<<<<<<< HEAD
+   	  if(search == "")
+   	  {
+   	  	//alert("Please enter something in the field"); //
+   	  }
+   	  else{
+=======
+>>>>>>> a4e5aa2424eeb9d6b5a847841bcb82e799c433e3
      	  $.get("https://www.googleapis.com/books/v1/volumes?q=" + search,function(response){
           for(i=0;i<response.items.length;i++)
           {

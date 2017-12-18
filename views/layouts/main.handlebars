@@ -12,7 +12,7 @@
 	<nav class="navbar is-transparent">
 	<div class="navbar-brand">
 		<a class="navbar-item">
-			<img src="/logo.png" alt="Book$tore logo" width="158" height="56">
+			<img src="/bookstorelogo.png" alt="Book$tore logo" width="125" height="250">
 		</a>
 		<div class="navbar-burger" data-target="navbarExampleTransparentExample">
 			<span></span>
@@ -22,14 +22,14 @@
 	</div>
 	<div id="navbarExampleTransparentExample" class="navbar-menu">
 		<div class="navbar-start">
-				<span><button class="button is-light is-medium" id="addNewBookButton">Add New Book</button></span>
-				<span><a href="/api/all"><button class="button is-light is-medium" id="allBooks">All of your Books </button></a></span>
-				<span><a href="/api/keep"><button class="button is-light is-medium" id="keepBooks">Books you want to keep</button></a></span>
-				<span><a href="/api/sell"><button class="button is-light is-medium" id="sellBooks">Books you want to sell</button></a></span>
+				<span><button class="button is-danger is-medium" id="addNewBookButton">Add Books</button></span>
+				<span><a href="/api/all"><button class="button is-danger is-medium" id="allBooks">Book Shelf</button></a></span>
+				<span><a href="/api/keep"><button class="button is-danger is-medium" id="keepBooks">Books To Keep</button></a></span>
+				<span><a href="/api/sell"><button class="button is-danger is-medium" id="sellBooks">Books To Sell</button></a></span>
 		</div>
 
 		<!-- The New Book Modal -->
-		<div id="search" class="modal">
+		<div id="search" class="modal is-active">
 			<div class="modal-background">
 				<div class="modal-card">
 					<title>Book Search</title>
@@ -52,7 +52,7 @@
 			<div class="navbar-item">
 				<div class="field is-grouped">
 					<p class="control">
-						<a class="button" href="/logout">
+						<a class="button" id="logoutButton" href="/logout">
 							<span>
 								Logout
 							</span>
