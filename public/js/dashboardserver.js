@@ -11,7 +11,7 @@ $(document).ready(function(){
    	  var search = $("#books").val();
    	  if(search == "")
    	  {
-   	  	alert("Please enter something in the field");
+   	  	//alert("Please enter something in the field"); //
    	  }
    	  else{
      	  $.get("https://www.googleapis.com/books/v1/volumes?q=" + search,function(response){

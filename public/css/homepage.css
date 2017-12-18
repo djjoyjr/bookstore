@@ -1,3 +1,9 @@
+.navbar .navbar-expand-lg .navbar-light .bg-light
+{
+background-color: blue !important;
+/*background-color : rgba(184, 229, 250, 0.5); */
+}
+
 .navbar-brand {
     position: absolute;
     left: 50%;
@@ -51,7 +57,7 @@ p{
 	background: rgba(128,0,0,0.1);
 	height: 355px;
 	width: 100%;
-	
+
 
 }
 
@@ -62,6 +68,3 @@ p{
 img{
 
 }
-
-
-

@@ -1,3 +1,34 @@
+
+.navbar.is-transparent
+{
+background-color : #6D0019;
+}
+
+.button.is-danger.is-medium
+{
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  margin: 5px;
+  color: #6D0019;
+  background-color: white;
+}
+
+/*
+.control
+{
+background-color: #6D0019;
+/*color: #FAF5E1;
+*/
+
+
+#logoutButton
+{
+background-color: #6D0019;
+color: #FAF5E1;
+}
+
+
+
 body {
   background-image: url("shelf.png");
   color: black;
