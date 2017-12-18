@@ -16,7 +16,7 @@ $(document).ready(function(){
            isbn=$('<h5 class="center-align white-text"> ISBN:  ' + response.items[i].volumeInfo.industryIdentifiers[0].identifier + '</h5>');
            author=$('<h5 class="center-align white-text"> By:  ' + response.items[i].volumeInfo.authors + '</h5>');
            img = $('<img class="aligning card z-depth-5" id="dynamic"><br><a target="_blank" href=' + response.items[i].volumeInfo.infoLink + '><button id="imagebutton" class="btn red aligning">Read More</button></a>');
-           clickIt = $('<h5 class="center-align white-text"> Click on the book cover to add it to your shelf </h5>');
+           clickIt = $('<h5 class="center-align white-text"> Click on the book cover to add it to your shelf</h5>');
            url= response.items[i].volumeInfo.imageLinks.thumbnail;
            img.attr('src', url);
            img.attr('data-title', response.items[i].volumeInfo.title);
