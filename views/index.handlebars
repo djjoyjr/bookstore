@@ -52,7 +52,26 @@
   {{/unless}}
 {{/each}}
 
+
+<!-- Amazon Search Results Modal -->
+<div id="amazon-results" class="modal">
+  <div class="modal-background">
+    <div class="modal-card">
+      <title>Amazon Search Results</title>
+      <div class="modal-content">
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
 <script>
+var amazonModal = $('#amazon-results');
+
+$(".modal-close").click(function(event) {
+  amazonModal.hide();
+});
+
 $(".sell").click(function(){
     console.log(this.id);
 });
@@ -68,8 +87,17 @@ $(".amazon").click(function(){
         isbn: data[0].isbn,
         title: data[0].title
       }).then(function(resdata){
-        console.log(resdata)
+        var modalContent = $("<div>");
+        var usedPrice = resdata.LowestUsedPrice.FormattedPrice;
+        var newPrice = resdata.LowestNewPrice.FormattedPrice;
+        var newAvailable = resdata.TotalNew;
+        var usedAvailable = resdata.TotalUsed;
+        modalContent.html("<p>There are " + newAvailable + " NEW copies on Amazon.com, starting at " +newPrice + ".</p><br><p> There are " + usedAvailable + " USED copies on Amazon.com, starting at " +usedPrice + ".");
+        $(".modal-content").empty();
+        $(".modal-content").append(modalContent);
+        amazonModal.show();
       })
     })
 });
+
 </script>
