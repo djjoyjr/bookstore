@@ -7,7 +7,6 @@ $(document).ready(function(){
 
    $("#myform").submit(function(){
      modal.style.display = "none";
-     $('#result').text("Please click on the image of the book to add it to your collection");
    	  var search = $("#books").val();
      	  $.get("https://www.googleapis.com/books/v1/volumes?q=" + search,function(response){
           for(i=0;i<response.items.length;i++)

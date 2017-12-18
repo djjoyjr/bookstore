@@ -78,14 +78,9 @@ var cancel = document.getElementById('cancelButton');
 btn.onclick = function() {
     modal.style.display = "block";
 }
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 $(".close-modal").click(function(event) {
-  amazonModal.hide();
+  modal.hide();
 });
 
 </script>
