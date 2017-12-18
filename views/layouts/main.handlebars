@@ -6,8 +6,7 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
 	<link rel="stylesheet" type="text/css" href="/main.css">
-<!-- 	<script type="text/javascript" src="/../controllers/amazon.js"></script>
-	 -->	<script src="/../js/dashboardserver.js"></script>
+	<script src="/../js/dashboardserver.js"></script>
 </head>
 <body>
 	<nav class="navbar is-transparent">
@@ -41,7 +40,7 @@
 							<label for="search">Enter either the book title or ISBN that you're searching for.</label>
 						</div>
 						<button class="button is-medium">Search Books</button>
-						<button class="button is-medium" aria-label="Cancel">Cancel</button>
+						<button class="button is-medium close-modal" aria-label="Cancel">Cancel</button>
 						</form>
 					</div>
 				</div>
@@ -79,9 +78,9 @@ var cancel = document.getElementById('cancelButton');
 btn.onclick = function() {
     modal.style.display = "block";
 }
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+
+$(".close-modal").click(function(event) {
+  modal.hide();
+});
+
 </script>
