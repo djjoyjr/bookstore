@@ -8,8 +8,6 @@ module.exports = function(app) {
     if (req.user) {
       res.render("index");
     }
-      console.log("1 this runs ");
-
     res.sendFile(path.join(__dirname, "../public/homepage.html"));
   });
 

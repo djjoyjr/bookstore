@@ -86,6 +86,7 @@ module.exports = function(app) {
   });
 
   app.put("/api/books/", function(req, res) {
+
     console.log("Updating keep to: " +req.body.keep);
     console.log("For book wih id: " +req.body.id);
     db.Book.update({
@@ -95,7 +96,7 @@ module.exports = function(app) {
         id: req.body.id
       }
     }).then(function(dbBook) {
-        res.json(dbBook);
+      res.json(dbBook);
     });
   });
 };

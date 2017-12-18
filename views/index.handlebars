@@ -17,13 +17,13 @@
           {{description}}
           <p> By:  {{author}}</p>
         </div>
-        {{> books/book-block keep=false}}
+        <a id="{{this.id}}" class="button is-small amazon">Amazon</a>
+        <a id="{{this.id}}" class="button is-small sell">I want to sell this book</a>
       </div>
     </div>
     <br>
   {{/if}}
 {{/each}}
-
 
 {{#each books}}
   {{#unless keep}}
@@ -44,9 +44,22 @@
           {{description}}
           <p> By:  {{author}}</p>
         </div>
-        {{> books/book-block keep=true}}
+        <a id="{{this.id}}" class="button is-small amazon">Amazon</a>
+        <a id="{{this.id}}" class="button is-small keep">I want to keep this book</a>
       </div>
     </div>
     <br>
   {{/unless}}
 {{/each}}
+
+<script>
+$(".sell").click(function(){
+    console.log(this.id);
+});
+$(".keep").click(function(){
+    console.log(this.id);
+});
+$(".amazon").click(function(){
+    console.log(this.id);
+});
+</script>

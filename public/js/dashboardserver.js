@@ -64,14 +64,11 @@ $(document).ready(function(){
      alert($(this).attr("data-title") + " successfully added to your library.");
    }
 
-   $(".change-keep").on("click", function(event) {
-     var id = $(this).data("id");
-     var newKeep = $(this).data("newkeep");
-     alert(newKeep);
-     alert(id);
+   $(".sell").on("click", function(event) {
+     var id = this.id;
      var newKeepState = {
        id: id,
-       keep: newKeep
+       keep: false
      };
      // Send the PUT request.
      $.ajax("/api/books/", {
@@ -79,11 +76,30 @@ $(document).ready(function(){
        data: newKeepState
      }).then(
        function() {
-         console.log("changed keep to", newKeep);
+         console.log("changed keep status");
          // Reload the page to get the updated list
          location.reload();
        }
      );
    });
+
+   $(".keep").on("click", function(event) {
+    var id = this.id;
+    var newKeepState = {
+      id: id,
+      keep: true
+    };
+    // Send the PUT request.
+    $.ajax("/api/books/", {
+      type: "PUT",
+      data: newKeepState
+    }).then(
+      function() {
+        console.log("changed keep status");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
 
 });
