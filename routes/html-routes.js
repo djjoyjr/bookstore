@@ -1,6 +1,6 @@
 var path = require("path");
-
 var isAuthenticated = require("../config/middleware/isAuthenticated");
+var db = require("../models");
 
 module.exports = function(app) {
 
@@ -19,7 +19,16 @@ module.exports = function(app) {
   });
 
   app.get("/members", isAuthenticated, function(req, res) {
-    res.render("index");
+    // console.log("4: email: " +req.user.email);
+    // console.log("4: id: " + req.user.id);
+    db.Book.findAll({
+      where: {
+        UserId: req.user.id
+      }
+    }).then(function(dbBook) {
+    // console.log(dbBook);
+    res.render("index", {books: dbBook});
+    });
   });
 
 };

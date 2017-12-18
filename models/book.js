@@ -12,11 +12,18 @@ var Book = sequelize.define("Book", {
   author: {
     type: Sequelize.STRING
   },
-  genre: {
-    type: Sequelize.STRING
-  },
   isbn: {
     type: Sequelize.STRING
+  },
+  description: {
+    type: Sequelize.TEXT
+  },
+  thumbnail: {
+    type: Sequelize.STRING
+  },
+  keep: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: true
   }
 }, {
   timestamps: false

@@ -11,7 +11,6 @@ var passport = require("./config/passport");
 var exphbs = require("express-handlebars");
 var path = require("path");
 
-
 // Sets up the Express App
 // =============================================================
 var PORT = process.env.PORT || 8080;
@@ -31,11 +30,11 @@ app.use(passport.session());
 app.use(express.static(process.cwd() + '/public'));
 app.use(express.static(process.cwd() + '/public/img'));
 app.use(express.static(process.cwd() + '/public/js'));
+app.use(express.static(process.cwd() + '/public/css'));
 
 //Handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
 
 // Routes
 // =============================================================
