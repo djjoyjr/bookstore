@@ -72,6 +72,7 @@ module.exports = function(app) {
       });
     }
   });
+
   app.post("/api/books", function(req, res) {
     db.Book.create({
       title: req.body.title,
@@ -99,4 +100,19 @@ module.exports = function(app) {
       res.json(dbBook);
     });
   });
+
+  app.get("/api/books/:id", function(req,res){
+    db.Book.findAll({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(data){
+        res.json(data)
+      });
+  });
+
+  app.post("/api/amazon/", function(req,res){
+    res.json([req.body.isbn, req.body.title])
+  });
+
 };
