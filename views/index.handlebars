@@ -60,6 +60,16 @@ $(".keep").click(function(){
     console.log(this.id);
 });
 $(".amazon").click(function(){
-    console.log(this.id);
+    var id = this.id
+    var url = "/api/books/" + id
+
+    $.get(url).then(function(data){
+      $.post("/api/amazon/", {
+        isbn: data[0].isbn,
+        title: data[0].title
+      }).then(function(resdata){
+        console.log(resdata)
+      })
+    })
 });
 </script>
