@@ -119,7 +119,7 @@ module.exports = function(app) {
     var isbn = req.body.isbn;
 
       function amazonQuery() {
-        // var details = require('../details');
+        var details = require('../details');
         const {OperationHelper} = require('apac');
         const opHelper = new OperationHelper({
             awsId: process.env.awsId || details.AccessId,
