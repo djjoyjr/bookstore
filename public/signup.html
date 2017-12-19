@@ -2,47 +2,65 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Book$tore signup</title>
+        <meta name="description" content="signup Form" />
+        <meta name="keywords" content="css3, signup, form, custom, input, submit, button, html5, placeholder" />
+        <meta name="author" content="Codrops" />
+        <link rel="stylesheet" type="text/css" href="css/login.css" />
+        <script src="js/modernizr.custom.63321.js"></script>
+
+    <style> 
+      @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Handlee);
+      body {
+        background: #eedfcc url(images/bg1.jpg) no-repeat center top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+      }
+      .container > header h1,
+      .container > header h2 {
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+      }
+    </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
-    </div>
-  </nav>
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
-        <form class="signup">
+    <header>
+        <h1><strong>Signup Form</strong></h1>
+    </header>
+      <section class="main">
+        <form class="signup form clearfix">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <p>
+            <input type="text" class="form-control" id="email-input" name="signup" placeholder="Email">
+            <input type="password" class="form-control" name="password" id="password-input" placeholder="Password">
+          </p>
+            <div style="display: none" id="alert" class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>
           </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
+          <button type="submit" name="submit" class="btn btn-default"><i class="icon-arrow-right"></i>
+          <span>signup</span></button>
         </form>
-        <br />
-        <p>Or log in <a href="/login">here</a></p>
-      </div>
+      </section>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/signup.js"></script>
-
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(function(){
+  $('input, textarea').placeholder();
+  });
+  </script>
 </body>
 
 </html>
