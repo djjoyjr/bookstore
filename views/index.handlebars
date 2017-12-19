@@ -1,5 +1,7 @@
+<ul>
 {{#each books}}
   {{#if keep}}
+  <li>
     <div class="card">
       <div class="card-image">
         <figure class="image is-1by1">
@@ -22,11 +24,15 @@
       </div>
     </div>
     <br>
+  </li>
   {{/if}}
 {{/each}}
+</ul>
 
+<ul>
 {{#each books}}
   {{#unless keep}}
+  <li>
     <div class="card">
       <div class="card-image">
         <figure class="image is-1by1">
@@ -49,8 +55,10 @@
       </div>
     </div>
     <br>
+  </li>
   {{/unless}}
 {{/each}}
+</ul>
 
 <!-- Amazon Search Results Modal -->
 <div id="amazon-results" class="modal">
@@ -69,7 +77,7 @@ var amazonModal = $('#amazon-results');
 
 $(".modal-close").click(function(event) {
   amazonModal.hide();
-  location.reload(); 
+  location.reload();
 });
 
 $(".sell").click(function(){

@@ -111,9 +111,6 @@ module.exports = function(app) {
       });
   });
 
-
-
-
   app.post("/api/amazon/", function(req,res){
     console.log(req.body.isbn);
     console.log(req.body.title);
