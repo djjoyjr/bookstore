@@ -6,7 +6,7 @@ module.exports = function(app) {
 
   app.get("/", function(req, res) {
     if (req.user) {
-      res.render("index");
+      res.redirect("/members");
     }else{
       res.sendFile(path.join(__dirname, "../public/homepage.html"));
     }
