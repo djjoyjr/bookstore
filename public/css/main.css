@@ -13,21 +13,15 @@ background-color : #6D0019;
   background-color: white;
 }
 
-/*
-.control
-{
-background-color: #6D0019;
-/*color: #FAF5E1;
-*/
-
-
 #logoutButton
 {
 background-color: #6D0019;
 color: #FAF5E1;
 }
 
-
+img {
+  border-radius: 5%
+}
 
 body {
   background-image: url("shelf.png");
@@ -50,15 +44,21 @@ div.card {
   color: white;
   margin-left: auto;
   margin-right: auto;
-  height: 500px;
+  height: 300px;
   width: 750px;
+}
+button.modal-close.is-large {
+  position: relative;
+  left: 1%;
+  background-color: red;
 }
 .card {
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 450px;
-  border-radius: 15px;
+  border-radius: 5%;
+  background-image: url(/parchment.jpg);
 }
 h2 {
 text-align: center;
@@ -85,8 +85,7 @@ button{
   font-size: 30px;
 }
 ul {
-  margin-left: 50px;
-  margin-right: auto;
+  margin-left: 5%;
 }
 li {
   margin-left: auto;
@@ -97,4 +96,10 @@ li {
 .content {
   height: 100px;
   overflow: scroll;
+}
+.amazon {
+  width: 85px;
+  height: 85px;
+  background-image:url("amazonicon.png");
+  border-radius: 20px;
 }
