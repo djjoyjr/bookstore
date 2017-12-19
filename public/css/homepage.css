@@ -1,3 +1,4 @@
+
 .cb-slideshow,
 .cb-slideshow:after {
     position: fixed;
@@ -356,3 +357,75 @@
 @media screen and (max-width: 600px) { 
 	.cb-slideshow li div h3 { font-size: 50px }
 }
+=======
+.navbar .navbar-expand-lg .navbar-light .bg-light
+{
+background-color: blue !important;
+/*background-color : rgba(184, 229, 250, 0.5); */
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px !important;  /* 50% of your logo width */
+    display: block;
+}
+
+.jumbotron{
+	height: 700px;
+	background-image: url("https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb");
+	background-repeat: no-repeat;
+}
+h1{
+	color: orange;
+	font-family: 'Passion One', cursive;
+	text-shadow: 2px 2px black;
+	font-size: 600%;
+}
+h2{
+	color: black;
+	font-family: 'Passion One', cursive;
+	font-size: 600%;
+}
+h3{
+	color: black;
+	font-family: 'Passion One', cursive;
+	font-size: 300%;
+}
+h4{
+	color: black
+	font-family: 'Passion One', cursive;
+	font-size: 200%;
+}
+p{
+	color: black;
+	font-family: 'Open Sans', sans-serif;
+}
+.footer{
+	background-color: #353c3f;
+}
+.about{
+	height: 700px;
+	width: 100%;
+}
+.btn{
+	background-color: orange;
+}
+
+#Loginform{
+
+	background: rgba(128,0,0,0.1);
+	height: 355px;
+	width: 100%;
+
+
+}
+
+.form-group{
+	width: 500px;
+}
+
+img{
+
+}
+
