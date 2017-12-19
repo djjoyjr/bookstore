@@ -6,8 +6,10 @@ module.exports = function(app) {
 
   app.get("/", function(req, res) {
     if (req.user) {
+      console.log('user')
       res.render("index");
     }
+    console.log('no user');
     res.sendFile(path.join(__dirname, "../public/homepage.html"));
   });
 
