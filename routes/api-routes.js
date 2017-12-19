@@ -122,9 +122,9 @@ module.exports = function(app) {
         var details = require('../details');
         const {OperationHelper} = require('apac');
         const opHelper = new OperationHelper({
-            awsId: details.AccessId,
-            awsSecret: details.Secret,
-            assocId: details.Tag,
+            awsId: process.env.awsId || details.AccessId,
+            awsSecret: process.env.awsSecret || details.Secret,
+            assocId: process.env.assocId || details.Tag,
             locale: 'US'
         });
 
