@@ -41,11 +41,11 @@ $(document).ready(function(){
      $.get("/api/user_data").then(function(data) {
        userId = data.id;
      });
-     console.log($(this).attr("data-title"));
-     console.log($(this).attr("data-author"));
-     console.log($(this).attr("data-isbn"));
-     console.log($(this).attr("data-description"));
-     console.log($(this).attr("data-thumbnail"));
+     // console.log($(this).attr("data-title"));
+     // console.log($(this).attr("data-author"));
+     // console.log($(this).attr("data-isbn"));
+     // console.log($(this).attr("data-description"));
+     // console.log($(this).attr("data-thumbnail"));
 
      var newBook = {
        title: $(this).attr("data-title"),
@@ -97,5 +97,21 @@ $(document).ready(function(){
       }
     );
   });
+
+  $(".remove").on("click", function(event) {
+   var id = this.id;
+   console.log("dashboardserver id:  " +id);
+   // Send the DELETE request.
+   $.ajax("/api/books/:id", {
+     type: "DELETE",
+     url: "/api/books/" + id
+   }).then(
+     function() {
+       console.log("book deleted");
+       // Reload the page to get the updated list
+       location.reload();
+     }
+   );
+ });
 
 });

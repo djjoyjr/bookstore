@@ -119,7 +119,7 @@ module.exports = function(app) {
     var isbn = req.body.isbn;
 
       function amazonQuery() {
-        // var details = require('../details');
+        var details = require('../details');
         const {OperationHelper} = require('apac');
         const opHelper = new OperationHelper({
             awsId: process.env.awsId || details.AccessId,
@@ -149,17 +149,6 @@ module.exports = function(app) {
         });
       };
       amazonQuery();
-  });
-
-  app.delete("/api/books/:id", function(req, res) {
-    // We just have to specify which todo we want to destroy with "where"
-    db.Book.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(dbBook) {
-      res.json(dbBook);
-    });
   });
 
 

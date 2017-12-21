@@ -32,4 +32,17 @@ module.exports = function(app) {
     });
   });
 
+  app.delete("/api/books/:id", function(req, res) {
+    // We just have to specify which todo we want to destroy with "where"
+    db.Book.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbBook) {
+      res.json(dbBook);
+    });
+  });
+
+
+
 };
