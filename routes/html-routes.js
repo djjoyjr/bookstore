@@ -29,6 +29,7 @@ module.exports = function(app) {
     }).then(function(dbBook) {
     // console.log(dbBook);
     res.render("index", {books: dbBook});
+    res.end();
     });
   });
 

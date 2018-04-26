@@ -127,7 +127,7 @@
     -ms-animation-delay: 30s;
     animation-delay: 30s;
 }
-@-webkit-keyframes imageAnimation { 
+@-webkit-keyframes imageAnimation {
 	0% {
 	    opacity: 0;
 	    -webkit-animation-timing-function: ease-in;
@@ -151,7 +151,7 @@
 	}
 	100% { opacity: 0 }
 }
-@-moz-keyframes imageAnimation { 
+@-moz-keyframes imageAnimation {
 	0% {
 	    opacity: 0;
 	    -moz-animation-timing-function: ease-in;
@@ -175,7 +175,7 @@
 	}
 	100% { opacity: 0 }
 }
-@-o-keyframes imageAnimation { 
+@-o-keyframes imageAnimation {
 	0% {
 	    opacity: 0;
 	    -o-animation-timing-function: ease-in;
@@ -199,7 +199,7 @@
 	}
 	100% { opacity: 0 }
 }
-@-ms-keyframes imageAnimation { 
+@-ms-keyframes imageAnimation {
 	0% {
 	    opacity: 0;
 	    -ms-animation-timing-function: ease-in;
@@ -223,7 +223,7 @@
 	}
 	100% { opacity: 0 }
 }
-@keyframes imageAnimation { 
+@keyframes imageAnimation {
 	0% {
 	    opacity: 0;
 	    animation-timing-function: ease-in;
@@ -247,7 +247,7 @@
 	}
 	100% { opacity: 0 }
 }
-@-webkit-keyframes titleAnimation { 
+@-webkit-keyframes titleAnimation {
 	0% {
 	    opacity: 0;
 	    -webkit-transform: translateY(-300%);
@@ -267,7 +267,7 @@
 	25% { opacity: 0 }
 	100% { opacity: 0 }
 }
-@-moz-keyframes titleAnimation { 
+@-moz-keyframes titleAnimation {
 	0% {
 	    opacity: 0;
 	    -moz-transform: translateY(-300%);
@@ -287,7 +287,7 @@
 	25% { opacity: 0 }
 	100% { opacity: 0 }
 }
-@-o-keyframes titleAnimation { 
+@-o-keyframes titleAnimation {
 	0% {
 	    opacity: 0;
 	    -o-transform: translateY(-300%);
@@ -307,7 +307,7 @@
 	25% { opacity: 0 }
 	100% { opacity: 0 }
 }
-@-ms-keyframes titleAnimation { 
+@-ms-keyframes titleAnimation {
 	0% {
 	    opacity: 0;
 	    -ms-transform: translateY(-300%);
@@ -327,7 +327,7 @@
 	25% { opacity: 0 }
 	100% { opacity: 0 }
 }
-@keyframes titleAnimation { 
+@keyframes titleAnimation {
 	0% {
 	    opacity: 0;
 	    transform: translateY(-300%);
@@ -351,10 +351,10 @@
 .no-cssanimations .cb-slideshow li span{
 	opacity: 1;
 }
-@media screen and (max-width: 1140px) { 
+@media screen and (max-width: 1140px) {
 	.cb-slideshow li div h3 { font-size: 100px }
 }
-@media screen and (max-width: 600px) { 
+@media screen and (max-width: 600px) {
 	.cb-slideshow li div h3 { font-size: 50px }
 }
 =======
@@ -413,19 +413,11 @@ p{
 }
 
 #Loginform{
-
 	background: rgba(128,0,0,0.1);
 	height: 355px;
 	width: 100%;
-
-
 }
 
 .form-group{
 	width: 500px;
 }
-
-img{
-
-}
-
